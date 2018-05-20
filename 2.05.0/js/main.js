@@ -25,7 +25,7 @@ d3.json("data/data.json").then(function(data) {
     var circles = svg.selectAll("circle")
         .data(jsonCirclePositions);
 
-    circles.enter()  // Configurations of the circles...
+    circles.enter()  // Setup the circles...
         .append("circle")
         .attr("cx", function (d) {
             return d.x
