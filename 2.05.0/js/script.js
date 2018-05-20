@@ -1,6 +1,10 @@
+/**
+ * Author: Siqi Zhao
+ * Data: 2018-05-19
+ * */
+
 var width = 1000,
     height = 800;
-
 
 // Define the div for the tooltip
 var div = d3.select("body").append("div")
