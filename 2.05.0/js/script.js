@@ -73,20 +73,20 @@ d3.json("data/data.json", function(error, json) {
             return strokeScaleForNodes(d.value)
         })
         .on("mouseover", function(d) {
-            d3.select(this).style({  // Highlight the node when mouse hovering...
-                fill: "orange"
-            });
+            svg.selectAll("circle")
+                .attr("opacity", 0.5);
+            d3.select(this) // Highlight the selected node...
+                .attr("opacity", 1);
             div.transition()
                 .duration(200)
                 .style("opacity", .9);
-            div.html(d.value)
+            div.html('<b>' + d.value + '<b>')
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
         .on("mouseout", function() {
-            d3.select(this).style({  // Go back to the original status...
-                fill: "grey"
-            });
+            svg.selectAll("circle")
+                .attr("opacity", 1);
             div.transition()
                 .duration(500)
                 .style("opacity", 0);
