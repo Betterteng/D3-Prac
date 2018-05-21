@@ -1,0 +1,6 @@
+(1) Set the local web service first.
+
+(2) The application entrance is the index.html.
+
+(3) If you want to change the data set, simply go the js folder. Find the script.js file. In line 24, the first
+    parameter of the d3.json() will accept the path of the file.
